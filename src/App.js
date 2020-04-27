@@ -98,6 +98,10 @@ function App() {
     const spaces = ['myAwesomeDapp']
     const address = account
     await box.auth(spaces, {address})
+    await box.syncDone
+    await box.public.set('name', 'John Doe')
+    const nickname = await box.public.get('name')
+    console.log('nickname',nickname)//should say John Doe
   }
 
   return (
