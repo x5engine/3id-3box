@@ -23,7 +23,9 @@
     "start": "react-scripts start",
     "build": "react-scripts --max-old-space-size=8192 build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "draft":"cd build && netlify deploy",
+    "deploy":"cd build && netlify deploy --prod"
   },
   "eslintConfig": {
     "extends": "react-app"

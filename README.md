@@ -1,4 +1,17 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 3ID 3Box Demo in react
+
+## 3ID: Data Identity, Access Control, Encryption
+
+3ID is a decentralized identity (DID) protocol and standard providing data identity, access control, and encryption for user data stored on the decentralized web in decentralized databases, or just IPFS.
+
+In 3Box, wallets perform the role of holding users’ private keys, as well as using those keys for authenticating data access control, signing, and encryption via 3ID. More on 3ID below. 3Box allows users to bring their own existing wallet and relies on third-party wallet providers rather than providing a stand-alone wallet.
+
+In order to create a 3Box session a provider needs to be passed. This can be an ethereum provider (from web3.currentProvider, or window.ethereum) or a 3ID Provider (from IdentityWallet). It is now suggested to use the 3ID Connect Provider, which is a 3ID provider that wraps available ethereum providers and will manage/permission 3ID keys, authentication and blockchain account links inside an iframe. This will become the default soon and will overide passed ethereum providers.
+
+
+## Check the Demo
+
+[Live Demo](https://3id-3box.x5engine.com)
 
 ## Available Scripts
 
@@ -12,11 +25,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `yarn build`
 
 Builds the app for production to the `build` folder.<br />
@@ -25,44 +33,18 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `yarn deploy`
 
-### `yarn eject`
+**Note: This is only for deploying to netlify**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+You must build before deploying
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can learn more in the [3Box documentation](https://github.com/3box/3box-js)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[Medium Article with more details](https://medium.com/3box/3box-architecture-a3e35c82e919)
 
-### Code Splitting
+##More to know
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[3ID Resolver](https://github.com/3box/3id-resolver)

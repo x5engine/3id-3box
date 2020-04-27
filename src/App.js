@@ -9,15 +9,28 @@ import WalletConnectProvider from "@walletconnect/web3-provider";
 var Web3 = require('web3');
 
 const providerOptions = {
-  injected: {
-    display: {
-      name: "MetaMask",
-      description: "Connect with MetaMask in your Browser"
-    },
-    package: null
-  },
   torus: {
-    package: Torus // required
+    package: Torus,
+    display: {
+      name: "Social Login",
+      description: "Connect with your social accounts"
+    },
+    options: {
+      config: {
+          enableLogging: false, // optional
+          buttonPosition: "bottom-left", // optional
+          buildEnv: "production", // optional
+          showTorusButton: true, // optional
+          enabledVerifiers: {
+              // optional
+              google: true,
+              facebook: true,
+              twitch: true,
+              reddit: true,
+              discord: true,
+          }
+      }
+    }
   },
   authereum: {
     package: Authereum // required
